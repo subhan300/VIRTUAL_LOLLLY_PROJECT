@@ -15,15 +15,7 @@ exports.createPages = async ({ actions, graphql }) => {
   }}}
   `)
 
+  console.log(result,"reult")
 
-  result.data.LOLLIES.GetCard.map(async (indLolly) => {
-    console.log(indLolly)
-    await actions.createPage({
-      path: `lolly/${indLolly.link}`,
-      component: path.resolve(`./src/template/lollyPage.js`),
-      context: {
-        lolly: indLolly,
-      },
-    })
-  })
+
 }

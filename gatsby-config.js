@@ -10,8 +10,11 @@ module.exports = {
           // Field under which the remote schema will be accessible. You'll use this in your Gatsby query
           fieldName: "LOLLIES",
           // Url to query from
-           url: "https://naughty-lewin-76fd9d.netlify.app/.netlify/functions/Vcard",
+           url: "http://localhost:8888/.netlify/functions/Vcard",
         },
       }
     ]
     }
+
+
+    // https://naughty-lewin-76fd9d.netlify.app/
