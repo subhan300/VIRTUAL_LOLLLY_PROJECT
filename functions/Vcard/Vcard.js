@@ -50,7 +50,8 @@ const resolvers = {
         return result.data.map(d=>{
           return {
              c1:d.data.c1,c2:d.data.c2,c3:d.data.c3,
-             msg:d.data.msg,sender:d.data.sender,rec:d.data.rec
+             msg:d.data.msg,sender:d.data.sender,rec:d.data.rec,
+             link:d.link
           }
         })
 
@@ -103,6 +104,8 @@ const resolvers = {
 const server = new ApolloServer({
   typeDefs,
   resolvers,
+  playground: true,
+  introspection: true
 })
 
 const handler = server.createHandler()
