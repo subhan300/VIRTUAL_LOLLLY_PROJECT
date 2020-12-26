@@ -79,14 +79,14 @@ const resolvers = {
           )
         )
 
-        // axios
-        // .post("https://api.netlify.com/build_hooks/5fe62a44605fe10a40a29ca2")
-        // .then(function (response) {
-        //   console.log(response);
-        // })
-        // .catch(function (error) {
-        //   console.error(error,"netlify walay mai error hai");
-        // });
+        axios
+        .post("https://api.netlify.com/build_hooks/5fe770ec82357543f16a3dd7")
+        .then(function (response) {
+          console.log(response);
+        })
+        .catch(function (error) {
+          console.error(error,"netlify walay mai error hai");
+        });
 
         return{c1}
 

@@ -1,29 +1,29 @@
-// const path = require(`path`)
-// exports.createPages = async ({ actions, graphql }) => {
-//   console.log(graphql)
-//   const result = await graphql(`
-//   query MyQuery{
-//     LOLLIES{
-//         GetCard{
-//             c1: String
-//             c2: String
-//             c3: String
-//             rec: String
-//             sender: String
-//             msg: String
-//             link: String
-//   }}}
-//   `)
+const path = require(`path`)
+exports.createPages = async ({ actions, graphql }) => {
+  console.log(graphql)
+  const result = await graphql(`
+  query MyQuery{
+    LOLLIES{
+        GetCard{
+            c1
+            c2
+            c3
+            rec
+            sender
+            msg
+            link
+  }}}
+  `)
 
 
-//   result.data.LOLLIES.getAllLollies.map(async (indLolly) => {
-//     console.log(indLolly)
-//     await actions.createPage({
-//       path: `lolly/${indLolly.path}`,
-//       component: path.resolve(`./src/template/lollyPage.jsx`),
-//       context: {
-//         lolly: indLolly,
-//       },
-//     })
-//   })
-// }
+  result.data.LOLLIES.GetCard.map(async (indLolly) => {
+    console.log(indLolly)
+    await actions.createPage({
+      path: `lolly/${indLolly.link}`,
+      component: path.resolve(`./src/template/lollyPage.js`),
+      context: {
+        lolly: indLolly,
+      },
+    })
+  })
+}
